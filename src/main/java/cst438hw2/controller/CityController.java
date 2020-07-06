@@ -18,9 +18,12 @@ public class CityController {
 	@GetMapping("/cities/{city}")
 	public String getWeather(@PathVariable("city") String cityName, Model model) {
 
-		// TODO Your code goes here
-		// TODO delete the following line
-		return "";
-	} 
-	
+		CityInfo result = cityService.getCityInfo(cityName);
+		if(result == null) {
+			return "noCity";
+		} else {
+			model.addAttribute("cityInfo", result);
+			return "city";
+		}
+	}	
 }

@@ -67,7 +67,4 @@ public class City {
 				+ ", population=" + population 
 				+ "]";
 	}
-	
-	
-
 }
