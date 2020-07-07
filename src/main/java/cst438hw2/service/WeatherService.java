@@ -14,6 +14,7 @@ public class WeatherService {
 	
 	private static final Logger log = LoggerFactory.getLogger(WeatherService.class);
 	private RestTemplate restTemplate;
+	
 	private String weatherUrl;
 	private String apiKey;
 	

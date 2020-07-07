@@ -24,6 +24,7 @@ public class TempAndTime {
 		return Double.valueOf(df.format(tempF));
 	}
 	
+	
 	public long getTime() { return time; }
 	public void setTime(long time) { this.time = time; }
 	
