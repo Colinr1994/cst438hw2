@@ -54,7 +54,7 @@ public class CityServiceTest {
 		given(countryRepository.findByCode("TST")).willReturn(country);
 		
 		CityInfo result = cityService.getCityInfo("TestCity");
-		CityInfo expected = new CityInfo(1, "TestCity", "TST", "TestCountry", "TestDistrict", 1000, 80.33, "23:15");
+		CityInfo expected = new CityInfo(1, "TestCity", "TST", "TEST", "TestDistrict", 1000, 80.33, "04:03 AM");
 		assertEquals(expected,result);
 	}
 	

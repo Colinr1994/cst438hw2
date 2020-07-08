@@ -22,7 +22,7 @@ public class CityController {
 		if(result == null) {
 			return "noCity";
 		} else {
-			model.addAttribute("cityInfo", result);
+			model.addAttribute("city", result);
 			return "city";
 		}
 	}	
