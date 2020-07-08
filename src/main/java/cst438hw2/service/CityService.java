@@ -24,9 +24,15 @@ public class CityService {
 	
 	public CityInfo getCityInfo(String cityName) {
 		
-		// TODO your code goes here
-		// delete the following line
-		return null; 
+		List<City> city = cityRepository.findByName(cityName);
+		
+		if (city.size() == 0) return null;
+		else {
+			City tempCity = city.get(0);
+			Country tempCountry = countryRepository.findByCode(tempCity.getCountryCode());
+			TempAndTime tempAndTime = weatherService.getTempAndTime(cityName);
+			return new CityInfo(tempCity, tempCountry.getName(), tempAndTime.getFormTemp(), tempAndTime.getFormTime());
+		}
 	}
 	
 }

@@ -41,7 +41,7 @@ public class CityServiceTest {
 
 	@Test
 	public void testCityFound() throws Exception {
-		Country country = new Country("TST", "TestCountry");
+		Country country = new Country("TST", "TEST");
 		City city = new City(1, "TestCity", "TST", "TestDistrict", 1000);
 		
 		List<City> cities = new ArrayList<City>();
@@ -60,7 +60,7 @@ public class CityServiceTest {
 	
 	@Test 
 	public void  testCityNotFound() {
-		// TODO 
+		//Country country new Country("TST","TEST");
 	}
 	
 	@Test 
